@@ -1,32 +1,9 @@
 // authService.ts
 
 import axios from 'axios';
+import { LoginDto, LoginResponse, RegisterDto } from '../models/authModels';
 
-export interface LoginDto {
-    email: string;
-    password: string;
-}
-
-export interface LoginResponse {
-    token: string;
-    refreshToken: string;
-    expiresIn: number; // optional depending on backend
-}
-
-export interface RegisterDto {
-    email: string;
-    password: string;
-    userType: string;
-    displayName: string;
-}
-
-export interface User {
-    email: string;
-    displayName: string;
-    userType: string;
-}
-
-const API_BASE = 'http://localhost:5209';
+const API_BASE = 'http://localhost:5209/api';
 
 const TOKEN_KEY = 'access_token';
 const REFRESH_TOKEN_KEY = 'refresh_token';
@@ -43,13 +20,8 @@ export const authService = {
         return response.data;
     },
 
-    async register(data: RegisterDto): Promise<User> {
-        const response = await axios.post(`${API_BASE}/register`, data);
-        return {
-            email: data.email,
-            displayName: data.displayName,
-            userType: data.userType,
-        };
+    async register(data: RegisterDto): Promise<void> {
+        await axios.post(`${API_BASE}/Register`, data);
     },
 
     async logout(): Promise<void> {

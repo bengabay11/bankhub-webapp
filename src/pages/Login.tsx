@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { authService } from '../services/authService'; // ייבוא ה-authService
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -10,29 +11,16 @@ const Login = () => {
         setErrorMsg('');
 
         if (!email || !password) {
-            setErrorMsg('נא למלא את כל השדות.');
+            setErrorMsg('Please fill in all fields.'); // הודעת שגיאה באנגלית
             return;
         }
 
         try {
-            const res = await fetch('/api/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email, password }),
-            });
-
-            if (!res.ok) {
-                const data = await res.json();
-                throw new Error(data.message || 'שגיאה בהתחברות');
-            }
-
-            const data = await res.json();
-            localStorage.setItem('token', data.token); // שמור טוקן לדוגמה
-            window.location.href = '/dashboard'; // ניתוב אחרי התחברות
+            const token = await authService.login(email, password); // קריאה ל-authService
+            localStorage.setItem('token', token);
+            window.location.href = '/dashboard';
         } catch (err: any) {
-            setErrorMsg(err.message);
+            setErrorMsg(err.message); // הצגת הודעת שגיאה באנגלית
         }
     };
 
@@ -41,10 +29,10 @@ const Login = () => {
             className="login-container"
             style={{ maxWidth: 400, margin: 'auto', padding: 20 }}
         >
-            <h2>התחברות ל-BankHub</h2>
+            <h2>Login to BankHub</h2>
             <form onSubmit={handleLogin}>
                 <div>
-                    <label>אימייל:</label>
+                    <label>Email:</label>
                     <input
                         type="email"
                         value={email}
@@ -54,7 +42,7 @@ const Login = () => {
                     />
                 </div>
                 <div style={{ marginTop: 10 }}>
-                    <label>סיסמה:</label>
+                    <label>Password:</label>
                     <input
                         type="password"
                         value={password}
@@ -63,9 +51,9 @@ const Login = () => {
                         style={{ width: '100%' }}
                     />
                 </div>
-                {errorMsg && <p style={{ color: 'red' }}>{errorMsg}</p>}
+                {errorMsg && <p style={{ color: 'red' }}>{errorMsg}</p>}{' '}
                 <button type="submit" style={{ marginTop: 20, width: '100%' }}>
-                    התחבר
+                    Login
                 </button>
             </form>
         </div>
