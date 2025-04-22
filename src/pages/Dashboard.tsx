@@ -388,12 +388,12 @@ const Dashboard = () => {
                     const date = new Date(item.at).toLocaleString();
                     if ('giverUser' in item) {
                         const transfer = item as Transfer;
-                        return `${date},Transfer,${transfer.amount},${transfer.giverUser?.displayName} → ${transfer.takerUser?.displayName}`;
+                        return `"${date}",Transfer,${transfer.amount},${transfer.giverUser?.displayName} gave ${transfer.takerUser?.displayName}`;
                     } else {
                         const balanceUpdate = item as BalanceUpdate;
-                        return `${date},${
+                        return `"${date}",${
                             BalanceActionType[balanceUpdate.action]
-                        },${balanceUpdate.amount},Balance: ${
+                        },${balanceUpdate.amount},Balance After: ${
                             balanceUpdate.balanceAfter
                         }`;
                     }

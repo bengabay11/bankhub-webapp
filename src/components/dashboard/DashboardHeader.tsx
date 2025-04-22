@@ -1,6 +1,7 @@
 import '../../styles/components/dashboard/DashboardHeader.css';
 import '../../styles/common.css';
 import { UserType } from '../../models/userModels';
+import { FaSignOutAlt } from 'react-icons/fa';
 
 const getUserTypeLabel = (userType: UserType): string => {
     switch (userType) {
@@ -48,7 +49,8 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({
                             {getUserTypeLabel(userType)}
                         </div>
                     </div>
-                    <button onClick={onLogout} className="common-header-logout">
+                    <button onClick={onLogout} className="admin-header-logout">
+                        <FaSignOutAlt className="admin-header-logout-icon" />
                         Logout
                     </button>
                 </div>

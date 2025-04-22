@@ -62,3 +62,7 @@
 .header-logout:hover {
     color: #ef4444;
 }
+
+.header-account-type {
+    color: #4b5563;
+}
