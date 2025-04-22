@@ -1,0 +1,3 @@
+- csv header bug
+logout icon removed in regular dashboard
+- account type doesnt present in regular dashboard
