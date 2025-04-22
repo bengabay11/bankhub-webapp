@@ -1,61 +1,51 @@
-import { useState } from 'react';
-import { authService } from '../services/authService'; // ייבוא ה-authService
+import React from 'react';
+import LoginForm from '../components/auth/LoginForm';
+import '../styles/pages/Login.css';
 
-const Login = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [errorMsg, setErrorMsg] = useState('');
-
-    const handleLogin = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setErrorMsg('');
-
-        if (!email || !password) {
-            setErrorMsg('Please fill in all fields.'); // הודעת שגיאה באנגלית
-            return;
-        }
-
-        try {
-            const token = await authService.login(email, password); // קריאה ל-authService
-            localStorage.setItem('token', token);
-            window.location.href = '/dashboard';
-        } catch (err: any) {
-            setErrorMsg(err.message); // הצגת הודעת שגיאה באנגלית
-        }
-    };
-
+const Login: React.FC = () => {
     return (
-        <div
-            className="login-container"
-            style={{ maxWidth: 400, margin: 'auto', padding: 20 }}
-        >
-            <h2>Login to BankHub</h2>
-            <form onSubmit={handleLogin}>
-                <div>
-                    <label>Email:</label>
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                        style={{ width: '100%' }}
+        <div className="login-page">
+            {/* Left Section: Branding and Background */}
+            <div className="login-left">
+                {/* Decorative Elements */}
+                <div className="login-left-circle login-left-circle-top" />
+                <div className="login-left-circle login-left-circle-bottom" />
+
+                {/* Content */}
+                <div className="login-left-content">
+                    <img
+                        src="/path/to/bankhub-icon.png"
+                        alt="BankHub Icon"
+                        className="login-logo"
                     />
+                    <p className="login-description">
+                        Your trusted partner in financial management. Secure,
+                        fast, and easy to use.
+                    </p>
+                    <div className="login-stats">
+                        <div className="login-stat">
+                            <div className="login-stat-value">10M+</div>
+                            <div className="login-stat-label">Active Users</div>
+                        </div>
+                        <div className="login-stat">
+                            <div className="login-stat-value">$50B+</div>
+                            <div className="login-stat-label">Transactions</div>
+                        </div>
+                        <div className="login-stat">
+                            <div className="login-stat-value">99.9%</div>
+                            <div className="login-stat-label">Uptime</div>
+                        </div>
+                    </div>
                 </div>
-                <div style={{ marginTop: 10 }}>
-                    <label>Password:</label>
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                        style={{ width: '100%' }}
-                    />
+            </div>
+
+            {/* Right Section: Login Form */}
+            <div className="login-right">
+                <LoginForm />
+                <div className="login-copyright">
+                    © {new Date().getFullYear()} BankHub. All rights reserved.
                 </div>
-                {errorMsg && <p style={{ color: 'red' }}>{errorMsg}</p>}{' '}
-                <button type="submit" style={{ marginTop: 20, width: '100%' }}>
-                    Login
-                </button>
-            </form>
+            </div>
         </div>
     );
 };

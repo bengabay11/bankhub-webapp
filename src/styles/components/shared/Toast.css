@@ -1,0 +1,109 @@
+.toast-container {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+}
+
+.toast {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 320px;
+    max-width: 420px;
+    animation: toast-slide-in 0.2s ease-out;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.toast-success {
+    border-left: 4px solid #10b981;
+}
+
+.toast-error {
+    border-left: 4px solid #ef4444;
+}
+
+.toast-info {
+    border-left: 4px solid #3b82f6;
+}
+
+.toast-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(59, 130, 246, 0.1);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.toast-success .toast-icon {
+    color: #10b981;
+    background-color: rgba(16, 185, 129, 0.1);
+}
+
+.toast-error .toast-icon {
+    color: #ef4444;
+    background-color: rgba(239, 68, 68, 0.1);
+}
+
+.toast-info .toast-icon {
+    color: #3b82f6;
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+.toast-content {
+    flex: 1;
+    font-size: 0.925rem;
+    color: #1f2937;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.toast-close {
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 6px;
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    margin: -4px;
+}
+
+.toast-close:hover {
+    background-color: #f3f4f6;
+    color: #6b7280;
+}
+
+@keyframes toast-slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(100%) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes toast-slide-out {
+    from {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%) translateY(10px);
+    }
+}

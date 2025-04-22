@@ -1,7 +1,8 @@
 export interface LoginResponse {
-    token: string;
+    tokenType: string;
+    accessToken: string;
     refreshToken: string;
-    expiresIn: number; // optional depending on backend
+    expiresIn: number;
 }
 export interface LoginDto {
     email: string;
@@ -12,9 +13,4 @@ export interface RegisterDto {
     password: string;
     userType: number;
     displayName: string;
-}
-export interface User {
-    email: string;
-    displayName: string;
-    userType: string;
 }

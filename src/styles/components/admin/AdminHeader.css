@@ -1,0 +1,92 @@
+.admin-header {
+    background-color: white;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1.25rem 0;
+    margin-bottom: 2rem;
+}
+
+.admin-header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.admin-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-header-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.admin-header-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3b82f6;
+}
+
+.admin-header-divider {
+    width: 1px;
+    height: 1.5rem;
+    background-color: #e2e8f0;
+}
+
+.admin-header-subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #64748b;
+}
+
+.admin-header-logout {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1rem;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    color: #64748b;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.admin-header-logout:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+    color: #475569;
+}
+
+.admin-header-logout-icon {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .admin-header-container {
+        padding: 0 1.5rem;
+    }
+
+    .admin-header-subtitle {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .admin-header {
+        padding: 1rem 0;
+    }
+
+    .admin-header-container {
+        padding: 0 1rem;
+    }
+
+    .admin-header-divider,
+    .admin-header-subtitle {
+        display: none;
+    }
+}

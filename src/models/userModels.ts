@@ -1,17 +1,26 @@
-// src/types/userTypes.ts
+export interface GetUserBalanceResponse {
+    balance: number;
+}
+
+export enum BalanceActionType {
+    Withdrawal = 1,
+    Deposit = 2,
+}
 
 export interface BalanceUpdate {
-    date: string;
+    id: string;
+    action: BalanceActionType;
     amount: number;
-    type: 'deposit' | 'withdraw' | 'transfer';
+    at: string;
+    balanceAfter: number;
 }
 
 export interface Transfer {
     id: string;
-    senderUserId: string;
-    takerUserId: string;
+    giverUser: UserDetails;
+    takerUser: UserDetails;
     amount: number;
-    createdAt: string;
+    at: string;
 }
 
 export interface CreateTransferBody {
@@ -25,4 +34,45 @@ export interface WithdrawBody {
 
 export interface DepositBody {
     amount: number;
+}
+
+export enum Permission {
+    ViewDashboard = 1,
+    ViewAdminDashboard = 2,
+}
+
+export enum UserType {
+    Personal = 1,
+    RetailShop = 2,
+    Supermarket = 3,
+    Pharmacy = 4,
+    FoodBusiness = 5,
+}
+
+export interface UserDetails {
+    id: string;
+    displayName: string;
+    type: UserType;
+}
+
+export interface ExtendedUserDetails {
+    id: string;
+    displayName: string;
+    type: UserType;
+    email: string | null;
+    userName: string | null;
+    balance: number;
+    permissions: Permission[];
+    createdAt: string;
+}
+
+export interface FullUserDetails {
+    id: string;
+    displayName: string;
+    type: UserType;
+    email: string | null;
+    userName: string | null;
+    balance: number;
+    incomingTransfers: Transfer[];
+    outgoingTransfers: Transfer[];
 }

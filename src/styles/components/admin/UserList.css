@@ -1,0 +1,161 @@
+.user-list {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Table Container and Base Styles */
+.user-list-table-container {
+    overflow: auto;
+    width: 100%;
+}
+
+.user-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* Table Header Styles */
+.user-list-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #f8fafc;
+}
+
+.user-list-table th {
+    padding: 1rem 1.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #64748b;
+    border-bottom: 1px solid #e2e8f0;
+    white-space: nowrap;
+    background-color: #f8fafc;
+}
+
+/* Column Widths */
+.user-list-table th:nth-child(1) {
+    width: 30%;
+}
+.user-list-table th:nth-child(2) {
+    width: 35%;
+}
+.user-list-table th:nth-child(3) {
+    width: 25%;
+}
+.user-list-table th:nth-child(4) {
+    width: 10%;
+}
+
+/* Table Cell Styles */
+.user-list-table td {
+    padding: 1rem 1.5rem;
+    color: #334155;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.95rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.user-list-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* User Info Styles */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #e2e8f0;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+}
+
+.user-name {
+    font-weight: 500;
+    color: #1e293b;
+}
+
+/* User Type Badge Styles */
+.user-type-badge {
+    padding: 0.375rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+}
+
+.user-type-personal {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.user-type-retailshop {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.user-type-supermarket {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.user-type-pharmacy {
+    background-color: #ede9fe;
+    color: #5b21b6;
+}
+
+.user-type-foodbusiness {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* Action Button Styles */
+.user-delete-button {
+    padding: 0.5rem;
+    border: none;
+    background: none;
+    color: #94a3b8;
+    cursor: pointer;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+}
+
+.user-delete-button:hover {
+    color: #ef4444;
+    background-color: #fee2e2;
+}
+
+/* Empty State Styles */
+.user-list-empty {
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #64748b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-list-empty p {
+    font-size: 1rem;
+    margin: 0;
+}

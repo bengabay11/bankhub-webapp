@@ -1,0 +1,64 @@
+.dashboard-header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.header-divider {
+    width: 1px;
+    height: 24px;
+    background-color: #e5e7eb;
+}
+
+.header-subtitle {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.header-welcome {
+    color: #4b5563;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.header-welcome .user-name {
+    font-weight: 600;
+}
+
+.header-logout {
+    background-color: transparent;
+    color: #6b7280;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.header-logout:hover {
+    color: #ef4444;
+}

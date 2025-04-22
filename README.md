@@ -1,54 +1,117 @@
-# React + TypeScript + Vite
+# BankHub Web Application 🏦
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+BankHub is a web application designed to help users manage their finances securely and efficiently. It provides features such as user authentication, balance management, and transfer history.
 
-Currently, two official plugins are available:
+## Features ✨
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **🔒 User Authentication**: Secure login and registration functionality.
+-   **💰 Balance Management**: View current balance, deposit, and withdraw funds with smooth transition effects.
+-   **📜 Transfer History**: Track transfer and balance update history with advanced filtering and search capabilities.
+-   **📱 Responsive Design**: Optimized for various screen sizes.
+-   **🔍 Advanced Search**: Search through transaction history with real-time filtering.
+-   **⚡ Quick Actions**: Quick access to common banking features.
+-   **📊 Transaction Analytics**: Filter transactions by type, date range, and amount.
+-   **📤 Export Functionality**: Export transaction history for record-keeping.
+-   **🎨 Modern UI**: Beautiful and intuitive user interface with smooth animations.
 
-## Expanding the ESLint configuration
+## Technologies Used 🛠️
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+-   **Frontend**: React, TypeScript
+-   **Build Tool**: Vite ⚡
+-   **Routing**: React Router
+-   **State Management**: React Hooks
+-   **Icons**: React Icons
+-   **API Communication**: Axios
+-   **Styling**: CSS with modern design system
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Project Structure 📂
+
+```bash
+src/
+├── App.tsx                # Main application entry point
+├── pages/                 # Contains page components (Login, Register, Dashboard, AdminDashboard)
+├── components/            # Reusable UI components
+│   ├── auth/             # Authentication components
+│   ├── dashboard/        # Dashboard components
+│   └── shared/           # Shared components
+├── services/             # API service files
+├── models/               # TypeScript models and interfaces
+├── styles/               # CSS styles
+│   ├── common.css        # Global styles and variables
+│   ├── pages/           # Page-specific styles
+│   └── components/      # Component-specific styles
+└── main.tsx              # Vite entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started 🚀
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+-   Node.js (v14 or higher)
+-   Yarn (v1.22 or higher)
+
+### Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/bengabay11/bankhub-webapp.git
+    cd bankhub-webapp
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    yarn install
+    ```
+
+3. Start the development server:
+
+    ```bash
+    yarn dev
+    ```
+
+4. Open the application in your browser:
+
+    ```bash
+    http://localhost:5173
+    ```
+
+## Key Features 🏦
+
+### Authentication
+
+-   **Register**: Users can create an account with a display name, email, and password.
+-   **Login**: Users can log in with their credentials to access the dashboard.
+-   **Redirects**: Unauthenticated users are redirected to the login page (`/`), while authenticated users are redirected to the dashboard (`/dashboard`).
+
+### Dashboard
+
+-   **Balance Overview**: Displays the user's current balance with smooth transition effects.
+-   **Quick Actions**: Quick access to common banking features like loans and payment requests.
+-   **Transaction History**: View and filter transfer and balance update history.
+-   **Advanced Filtering**: Filter transactions by:
+    -   Type (transfers or balance updates)
+    -   Date range
+    -   Amount range
+    -   Transfer type (sent/received)
+    -   Balance action (deposit/withdrawal)
+-   **Search Functionality**: Real-time search through transaction history.
+-   **Export Capability**: Export transaction history for record-keeping.
+
+### Error Handling
+
+-   **Validation Errors**: Displays user-friendly error messages for invalid inputs.
+-   **Server Errors**: Parses and displays server-side validation errors in a readable format.
+-   **Toast Notifications**: Informative toast messages for user actions and system updates.
+
+## Scripts 📜
+
+-   `yarn dev`: Start the development server.
+-   `yarn build`: Build the application for production.
+-   `yarn preview`: Preview the production build.
+-   `yarn lint`: Run ESLint for code quality checks.
+
+## License 📄
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

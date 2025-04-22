@@ -1,0 +1,124 @@
+.register-form-container {
+    width: 100%;
+}
+
+.register-title {
+    font-size: var(--font-size-xxl);
+    color: var(--color-primary);
+    text-align: center;
+    font-weight: var(--font-weight-bold);
+}
+
+.register-features {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xxl);
+    width: 100%;
+    margin-bottom: var(--spacing-xxxl);
+}
+
+.feature {
+    flex: 1;
+    padding: var(--spacing-xl);
+    background-color: var(--color-background-white);
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-icon {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.feature h3 {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.feature p {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.form-container {
+    background-color: var(--color-background-white);
+    padding: 2.5rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    width: 100%;
+    max-width: 800px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}
+
+.register-link-container {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+}
+
+.register-link {
+    color: var(--color-primary);
+    cursor: pointer;
+    font-weight: var(--font-weight-medium);
+}
+
+/* Override input container margin for form rows */
+.form-row .input-container {
+    margin-bottom: 0;
+}
+
+/* Style the submit button */
+.form-container button[type='submit'] {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.875rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.form-container button[type='submit']:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-1px);
+}
+
+.form-container button[type='submit']:active {
+    transform: translateY(0);
+}

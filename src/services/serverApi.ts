@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { tokenService } from './tokenService';
 
-const api = axios.create({
-    baseURL: 'http://localhost:5209/api',
+export const api = axios.create({
+    baseURL: 'http://localhost:5209/',
 });
 
 api.interceptors.request.use((config) => {

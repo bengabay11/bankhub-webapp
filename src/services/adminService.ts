@@ -1,43 +1,57 @@
-import axios from 'axios';
-import { User } from '../models/authModels';
+import api from './serverApi';
+import { FullUserDetails } from '../models/userModels';
 
-const API_URL = 'http://localhost:5209/api/admin'; // כתובת ה-API של הניהול
+const ADMIN_ENDPOINT = '/admin/users';
 
 export const adminService = {
-    async getAllUsers(): Promise<User[]> {
+    async getAllUsers(): Promise<FullUserDetails[]> {
         try {
-            const response = await axios.get(`${API_URL}/users`);
+            const response = await api.get<FullUserDetails[]>(ADMIN_ENDPOINT);
             return response.data;
-        } catch (error) {
+        } catch (error: any) {
             throw new Error('Failed to fetch users');
         }
     },
 
-    async deleteUser(userId: string): Promise<void> {
+    async getUserById(id: string): Promise<FullUserDetails> {
         try {
-            await axios.delete(`${API_URL}/users/${userId}`);
-        } catch (error) {
+            const response = await api.get<FullUserDetails>(
+                `${ADMIN_ENDPOINT}/${id}`
+            );
+            return response.data;
+        } catch (error: any) {
+            if (error.response?.status === 404) {
+                throw new Error('User not found');
+            }
+            throw new Error('Failed to fetch user');
+        }
+    },
+
+    async deleteUser(id: string): Promise<void> {
+        try {
+            await api.delete(`${ADMIN_ENDPOINT}/${id}`);
+        } catch (error: any) {
+            if (error.response?.status === 404) {
+                throw new Error('User not found');
+            }
             throw new Error('Failed to delete user');
         }
     },
 
-    async searchUserByName(name: string): Promise<User> {
+    async searchUserByName(name: string): Promise<FullUserDetails> {
         try {
-            const response = await axios.get(`${API_URL}/users/search`, {
-                params: { name },
-            });
+            const response = await api.get<FullUserDetails>(
+                `${ADMIN_ENDPOINT}/search`,
+                {
+                    params: { name },
+                }
+            );
             return response.data;
-        } catch (error) {
+        } catch (error: any) {
+            if (error.response?.status === 404) {
+                throw new Error(`User with the name '${name}' not found.`);
+            }
             throw new Error('Failed to search for user');
-        }
-    },
-
-    async getUserById(userId: string): Promise<User> {
-        try {
-            const response = await axios.get(`${API_URL}/users/${userId}`);
-            return response.data;
-        } catch (error) {
-            throw new Error('Failed to fetch user by ID');
         }
     },
 };
