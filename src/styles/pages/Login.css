@@ -105,7 +105,10 @@
     box-sizing: border-box;
 }
 
-.login-form-container {
+/* Removed duplicate .login-form-container and .login-title definitions */
+
+.login-copyright {
+    margin-t.login-form-container {
     background-color: var(--color-background-white);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-md);
@@ -115,7 +118,7 @@
     box-sizing: border-box;
 }
 
-.login-title {
+.login-page-title {
     font-size: var(--font-size-xxl);
     color: var(--color-primary);
     margin-bottom: var(--spacing-xxxl);
@@ -148,8 +151,3 @@
 
 .error-icon {
     margin-right: 10px;
-}
-
-.arrow-icon {
-    margin-left: 10px;
-}

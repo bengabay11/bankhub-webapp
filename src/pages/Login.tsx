@@ -13,11 +13,7 @@ const Login: React.FC = () => {
 
                 {/* Content */}
                 <div className="login-left-content">
-                    <img
-                        src="/path/to/bankhub-icon.png"
-                        alt="BankHub Icon"
-                        className="login-logo"
-                    />
+                    <h1 className="login-page-title">BankHub</h1>
                     <p className="login-description">
                         Your trusted partner in financial management. Secure,
                         fast, and easy to use.
@@ -43,7 +39,7 @@ const Login: React.FC = () => {
             <div className="login-right">
                 <LoginForm />
                 <div className="login-copyright">
-                    © {new Date().getFullYear()} BankHub. All rights reserved.
+                    © 2025 BankHub. All rights reserved.
                 </div>
             </div>
         </div>

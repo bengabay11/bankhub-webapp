@@ -8,6 +8,7 @@ import { Permission } from '../../models/userModels';
 import Input from '../shared/Input';
 import Button from '../shared/Button';
 import ErrorMessage from '../shared/ErrorMessage';
+import '../../styles/components/auth/LoginForm.css';
 
 const LoginForm: React.FC = () => {
     const [email, setEmail] = useState('');
@@ -55,7 +56,7 @@ const LoginForm: React.FC = () => {
 
     return (
         <div className="login-form-container">
-            <h2 className="login-title">Sign In to Your Account</h2>
+            <h2 className="login-form-title">Sign In to Your Account</h2>
 
             {errorMsg && <ErrorMessage messages={errorMsg} />}
 
