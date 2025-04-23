@@ -138,16 +138,6 @@
     margin-bottom: var(--spacing-xl);
 }
 
-.btn-primary {
-    background-color: var(--color-primary);
-    color: var(--color-background-white);
-}
-
-.btn-primary:hover {
-    background-color: var(--color-primary-dark);
-    transform: scale(1.02);
-}
-
 /* Card Styles */
 .card {
     background-color: var(--color-background-white);

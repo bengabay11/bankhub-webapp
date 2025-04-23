@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { FaSignOutAlt } from 'react-icons/fa';
 import { authService } from '../../services/authService';
 import '../../styles/components/admin/AdminHeader.css';
-import '../../styles/common.css';
 
 const AdminHeader: React.FC = () => {
     const navigate = useNavigate();

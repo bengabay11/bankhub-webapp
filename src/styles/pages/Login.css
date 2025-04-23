@@ -105,27 +105,6 @@
     box-sizing: border-box;
 }
 
-/* Removed duplicate .login-form-container and .login-title definitions */
-
-.login-copyright {
-    margin-t.login-form-container {
-    background-color: var(--color-background-white);
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-md);
-    padding: var(--spacing-xxxxl);
-    width: 80%;
-    max-width: 450px;
-    box-sizing: border-box;
-}
-
-.login-page-title {
-    font-size: var(--font-size-xxl);
-    color: var(--color-primary);
-    margin-bottom: var(--spacing-xxxl);
-    text-align: center;
-    font-weight: var(--font-weight-bold);
-}
-
 .login-link {
     color: var(--color-primary);
     cursor: pointer;
@@ -136,7 +115,7 @@
     margin-top: var(--spacing-xl);
     text-align: center;
     font-size: var(--font-size-xs);
-    color: var(--color-text-light);
+    color: var(--color-text-secondary);
 }
 
 .input-wrapper {
@@ -148,6 +127,3 @@
     font-size: 0.9rem;
     color: #718096;
 }
-
-.error-icon {
-    margin-right: 10px;
