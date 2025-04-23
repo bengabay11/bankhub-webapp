@@ -104,10 +104,3 @@
     overflow: hidden;
     box-sizing: border-box;
 }
-
-.login-copyright {
-    margin-top: var(--spacing-xl);
-    text-align: center;
-    font-size: var(--font-size-xs);
-    color: var(--color-text-secondary);
-}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaExclamationCircle } from 'react-icons/fa';
+import '../../styles/components/shared/ErrorMessage.css';
 
 interface ErrorMessageProps {
     messages: string | string[];

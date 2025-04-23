@@ -1,9 +1,6 @@
-.copyright {
+.login-copyright {
+    margin-top: var(--spacing-xl);
     text-align: center;
-    padding: var(--spacing-lg);
-    color: var(--color-text-light);
     font-size: var(--font-size-xs);
-    margin-top: auto;
-    position: relative;
-    z-index: 1;
+    color: var(--color-text-secondary);
 }

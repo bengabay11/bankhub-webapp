@@ -91,7 +91,7 @@
 }
 
 /* Override input container margin for form rows */
-.form-row .input-container {
+.form-row {
     margin-bottom: 0;
 }
 

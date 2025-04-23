@@ -1,3 +1,4 @@
+/* Common Input Styles */
 .input-container {
     position: relative;
     margin-bottom: var(--spacing-xl);
@@ -12,6 +13,7 @@
 }
 
 .input-field {
+    color: black;
     width: 100%;
     padding: var(--spacing-md) var(--spacing-md) var(--spacing-md)
         var(--spacing-xxl);
@@ -31,10 +33,10 @@
 
 .input-icon {
     position: absolute;
-    left: var(--spacing-md);
+    left: 12px;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--color-text-light);
+    color: #a0aec0;
     display: flex;
     align-items: center;
     pointer-events: none;
@@ -43,19 +45,19 @@
 
 .input-toggle {
     position: absolute;
-    right: var(--spacing-md);
+    right: 12px;
     top: 50%;
     transform: translateY(-50%);
     background: none;
     border: none;
-    color: var(--color-text-light);
+    color: #a0aec0;
     cursor: pointer;
-    padding: var(--spacing-xs);
-    border-radius: var(--border-radius-full);
-    transition: var(--transition-default);
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
 }
 
 .input-toggle:hover {
     background-color: rgba(0, 0, 0, 0.05);
-    color: var(--color-text-secondary);
+    color: #718096;
 }

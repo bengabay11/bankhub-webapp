@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { IconType } from 'react-icons';
+import '../../styles/components/shared/Input.css';
 
 interface InputProps {
     id: string;

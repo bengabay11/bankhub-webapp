@@ -1,5 +1,6 @@
 import React from 'react';
 import { IconType } from 'react-icons';
+import '../../styles/components/shared/Select.css';
 
 interface SelectProps {
     id: string;

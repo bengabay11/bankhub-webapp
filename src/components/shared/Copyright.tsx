@@ -1,13 +1,9 @@
-import React from 'react';
+import '../../styles/components/shared/Copyright.css';
 
-interface CopyrightProps {
-    className?: string;
-}
-
-const Copyright: React.FC<CopyrightProps> = ({ className = '' }) => {
+const Copyright = () => {
     return (
-        <div className={`copyright ${className}`.trim()}>
-            © {new Date().getFullYear()} BankHub. All rights reserved.
+        <div className={'login-copyright'}>
+            © 2025 BankHub. All rights reserved.
         </div>
     );
 };

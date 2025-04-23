@@ -1,6 +1,7 @@
 import React from 'react';
 import LoginForm from '../components/auth/LoginForm';
 import '../styles/pages/Login.css';
+import Copyright from '../components/shared/Copyright';
 
 const Login: React.FC = () => {
     return (
@@ -38,9 +39,7 @@ const Login: React.FC = () => {
             {/* Right Section: Login Form */}
             <div className="login-right">
                 <LoginForm />
-                <div className="login-copyright">
-                    © 2025 BankHub. All rights reserved.
-                </div>
+                <Copyright />
             </div>
         </div>
     );

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaArrowRight, FaMoneyBillWave, FaWallet } from 'react-icons/fa';
+import '../../styles/components/dashboard/BalanceCard.css';
 
 interface BalanceCardProps {
     displayedBalance: number | null;

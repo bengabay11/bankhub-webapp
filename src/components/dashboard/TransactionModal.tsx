@@ -49,6 +49,11 @@ const TransactionModal: React.FC<TransactionModalProps> = ({
         }
     };
 
+    const handleClose = () => {
+        setAmount('');
+        onClose();
+    };
+
     const getIcon = () => {
         switch (type) {
             case 'Withdraw':
@@ -80,7 +85,7 @@ const TransactionModal: React.FC<TransactionModalProps> = ({
     if (!isOpen) return null;
 
     return (
-        <div className="modal-overlay" onClick={onClose}>
+        <div className="modal-overlay" onClick={handleClose}>
             <div
                 className="modal-container"
                 onClick={(e) => e.stopPropagation()}
@@ -159,7 +164,7 @@ const TransactionModal: React.FC<TransactionModalProps> = ({
                     <div className="modal-actions">
                         <button
                             type="button"
-                            onClick={onClose}
+                            onClick={handleClose}
                             className="modal-button modal-button-cancel"
                             disabled={isSubmitting}
                         >
