@@ -2,14 +2,6 @@
     margin-bottom: 1.25rem;
 }
 
-.input-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 0.875rem;
-    color: #4b5563;
-    font-weight: 500;
-}
-
 .input-wrapper {
     position: relative;
 }

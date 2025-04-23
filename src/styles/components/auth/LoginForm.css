@@ -22,6 +22,10 @@
     font-weight: var(--font-weight-medium);
 }
 
+.login-link:hover {
+    text-decoration: underline;
+}
+
 .login-link-container {
     text-align: center;
     font-size: var(--font-size-sm);

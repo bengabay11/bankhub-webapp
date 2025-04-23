@@ -105,25 +105,9 @@
     box-sizing: border-box;
 }
 
-.login-link {
-    color: var(--color-primary);
-    cursor: pointer;
-    font-weight: var(--font-weight-medium);
-}
-
 .login-copyright {
     margin-top: var(--spacing-xl);
     text-align: center;
     font-size: var(--font-size-xs);
     color: var(--color-text-secondary);
-}
-
-.input-wrapper {
-    position: relative;
-}
-
-.login-link-container {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #718096;
 }
