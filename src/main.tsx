@@ -5,7 +5,6 @@ import './styles/common.css';
 import './styles/pages/Login.css';
 import './styles/pages/Register.css';
 import './styles/pages/Dashboard.css';
-import './styles/components/shared/Select.css';
 import App from './App';
 
 createRoot(document.getElementById('root')!).render(
