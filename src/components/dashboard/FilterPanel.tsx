@@ -79,7 +79,6 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
                     <label className="filter-label">Amount Range</label>
                     <div className="filter-amount-range">
                         <div className="filter-amount-input-container">
-                            <span className="filter-amount-symbol">$</span>
                             <input
                                 type="number"
                                 placeholder="Min"
@@ -95,7 +94,6 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
                         </div>
                         <span className="filter-separator">to</span>
                         <div className="filter-amount-input-container">
-                            <span className="filter-amount-symbol">$</span>
                             <input
                                 type="number"
                                 placeholder="Max"

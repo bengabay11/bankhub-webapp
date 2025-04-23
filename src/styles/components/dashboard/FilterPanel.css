@@ -70,15 +70,6 @@
     flex: 1;
 }
 
-.filter-amount-symbol {
-    position: absolute;
-    left: 0.75rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #6b7280;
-    font-size: 0.875rem;
-}
-
 .filter-amount-input {
     background-color: white;
     width: 80%;
