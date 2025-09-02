@@ -1,11 +1,11 @@
 import React from 'react';
 import { FaTrash, FaUser } from 'react-icons/fa';
-import { ExtendedUserDetails, UserType } from '../../models/userModels';
+import { FullUserDetails, UserType } from '../../models/userModels';
 import '../../styles/components/admin/UserList.css';
 
 interface UserListProps {
-    users: ExtendedUserDetails[];
-    onDeleteUser: (user: ExtendedUserDetails) => void;
+    users: FullUserDetails[];
+    onDeleteUser: (user: FullUserDetails) => void;
 }
 
 const getUserTypeBadgeClass = (userType: UserType): string => {
