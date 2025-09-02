@@ -7,7 +7,6 @@ RUN corepack enable && corepack prepare yarn@4.6.0 --activate
 
 # Install dependencies
 COPY package.json yarn.lock .yarnrc.yml ./
-COPY .yarn .yarn
 RUN yarn install
 
 # Copy source code and build the app
