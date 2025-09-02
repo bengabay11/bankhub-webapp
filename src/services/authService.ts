@@ -2,7 +2,7 @@ import axios from 'axios';
 import { LoginDto, LoginResponse, RegisterDto } from '../models/authModels';
 import { tokenService } from './tokenService';
 
-const API_BASE = 'http://localhost:5209';
+const API_BASE = import.meta.env.VITE_API_URL;
 
 export class AuthError extends Error {
     constructor(message: string, public status?: number) {

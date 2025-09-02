@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { FaExclamationTriangle } from 'react-icons/fa';
-import { ExtendedUserDetails } from '../../models/userModels';
+import { FullUserDetails } from '../../models/userModels';
 import '../../styles/components/admin/DeleteUserModal.css';
 
 interface DeleteUserModalProps {
-    user: ExtendedUserDetails;
+    user: FullUserDetails;
     onConfirm: () => Promise<void>;
     onCancel: () => void;
 }

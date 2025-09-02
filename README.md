@@ -99,6 +99,30 @@ src/
 -   **Search Functionality**: Real-time search through transaction history.
 -   **Export Capability**: Export transaction history for record-keeping.
 
+## 🐳 Docker
+
+Running with Docker is the easiest way to get started with BankHub.
+
+### Pull the latest image from GitHub Container Registry
+
+```bash
+docker pull ghcr.io/bengabay11/bankhub-webapp:latest
+```
+
+### Or build the image locally
+
+```bash
+docker build -t bankhub-webapp .
+```
+
+### Run the container
+
+```bash
+docker run -d -p 3000:80 ghcr.io/bengabay11/bankhub-webapp:latest
+```
+
+The application will be available at <http://localhost:3000>
+
 ### Error Handling
 
 -   **Validation Errors**: Displays user-friendly error messages for invalid inputs.
