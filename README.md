@@ -118,7 +118,7 @@ docker build -t bankhub-webapp .
 ### Run the container
 
 ```bash
-docker run -d -p 3000:80 bankhub-webapp
+docker run -d -p 3000:80 ghcr.io/bengabay11/bankhub-webapp:latest
 ```
 
 The application will be available at <http://localhost:3000>
