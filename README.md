@@ -4,25 +4,25 @@ BankHub is a web application designed to help users manage their finances secure
 
 ## Features ✨
 
-- **🔒 User Authentication**: Secure login and registration functionality.
-- **💰 Balance Management**: View current balance, deposit, and withdraw funds with smooth transition effects.
-- **📜 Transfer History**: Track transfer and balance update history with advanced filtering and search capabilities.
-- **📱 Responsive Design**: Optimized for various screen sizes.
-- **🔍 Advanced Search**: Search through transaction history with real-time filtering.
-- **⚡ Quick Actions**: Quick access to common banking features.
-- **📊 Transaction Analytics**: Filter transactions by type, date range, and amount.
-- **📤 Export Functionality**: Export transaction history for record-keeping.
-- **🎨 Modern UI**: Beautiful and intuitive user interface with smooth animations.
+-   **🔒 User Authentication**: Secure login and registration functionality.
+-   **💰 Balance Management**: View current balance, deposit, and withdraw funds with smooth transition effects.
+-   **📜 Transfer History**: Track transfer and balance update history with advanced filtering and search capabilities.
+-   **📱 Responsive Design**: Optimized for various screen sizes.
+-   **🔍 Advanced Search**: Search through transaction history with real-time filtering.
+-   **⚡ Quick Actions**: Quick access to common banking features.
+-   **📊 Transaction Analytics**: Filter transactions by type, date range, and amount.
+-   **📤 Export Functionality**: Export transaction history for record-keeping.
+-   **🎨 Modern UI**: Beautiful and intuitive user interface with smooth animations.
 
 ## Technologies Used 🛠️
 
-- **Frontend**: React, TypeScript
-- **Build Tool**: Vite ⚡
-- **Routing**: React Router
-- **State Management**: React Hooks
-- **Icons**: React Icons
-- **API Communication**: Axios
-- **Styling**: CSS with modern design system
+-   **Frontend**: React, TypeScript
+-   **Build Tool**: Vite ⚡
+-   **Routing**: React Router
+-   **State Management**: React Hooks
+-   **Icons**: React Icons
+-   **API Communication**: Axios
+-   **Styling**: CSS with modern design system
 
 ## Project Structure 📂
 
@@ -47,8 +47,8 @@ src/
 
 ### Prerequisites
 
-- Node.js (v14 or higher)
-- Yarn (v1.22 or higher)
+-   Node.js (v14 or higher)
+-   Yarn (v1.22 or higher)
 
 ### Installation
 
@@ -81,9 +81,9 @@ src/
 
 ### Authentication
 
-- **Register**: Users can create an account with a display name, email, and password.
-- **Login**: Users can log in with their credentials to access the dashboard.
-- **Redirects**: Unauthenticated users are redirected to the login page (`/`), while authenticated users are redirected to the dashboard (`/dashboard`).
+-   **Register**: Users can create an account with a display name, email, and password.
+-   **Login**: Users can log in with their credentials to access the dashboard.
+-   **Redirects**: Unauthenticated users are redirected to the login page (`/`), while authenticated users are redirected to the dashboard (`/dashboard`).
 
 ### Dashboard
 
@@ -103,38 +103,38 @@ src/
 
 Running with Docker is the easiest way to get started with BankHub.
 
-### Pull the latest image from GitHub Container Registry:
+### Pull the latest image from GitHub Container Registry
 
 ```bash
-docker pull ghcr.io/bengabay11/bankhub:latest
+docker pull ghcr.io/bengabay11/bankhub-webapp:latest
 ```
 
-### Or build the image locally:
+### Or build the image locally
 
 ```bash
-docker build -t bankhub .
+docker build -t bankhub-webapp .
 ```
 
-### Run the container:
+### Run the container
 
 ```bash
-docker run -d -p 5209:80 --name bankhub bankhub
+docker run -d -p 3000:80 bankhub-webapp
 ```
 
-The application will be available at http://localhost:5209
+The application will be available at http://localhost:3000
 
 ### Error Handling
 
-- **Validation Errors**: Displays user-friendly error messages for invalid inputs.
-- **Server Errors**: Parses and displays server-side validation errors in a readable format.
-- **Toast Notifications**: Informative toast messages for user actions and system updates.
+-   **Validation Errors**: Displays user-friendly error messages for invalid inputs.
+-   **Server Errors**: Parses and displays server-side validation errors in a readable format.
+-   **Toast Notifications**: Informative toast messages for user actions and system updates.
 
 ## Scripts 📜
 
-- `yarn dev`: Start the development server.
-- `yarn build`: Build the application for production.
-- `yarn preview`: Preview the production build.
-- `yarn lint`: Run ESLint for code quality checks.
+-   `yarn dev`: Start the development server.
+-   `yarn build`: Build the application for production.
+-   `yarn preview`: Preview the production build.
+-   `yarn lint`: Run ESLint for code quality checks.
 
 ## License 📄
 
