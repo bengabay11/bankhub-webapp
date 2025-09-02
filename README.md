@@ -121,7 +121,7 @@ docker build -t bankhub-webapp .
 docker run -d -p 3000:80 bankhub-webapp
 ```
 
-The application will be available at http://localhost:3000
+The application will be available at <http://localhost:3000>
 
 ### Error Handling
 
